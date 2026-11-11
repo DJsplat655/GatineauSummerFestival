@@ -1,0 +1,110 @@
+body{
+    background-color: #cbbd93;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+a:visited{color: white}
+h2{
+    letter-spacing: 1px;
+}
+#banner{
+    border-block: 2px solid black;
+    background-color: #B1DFAE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#banner>header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#banner header img {
+    inline-size: 3em;
+}
+#banner h1{
+    margin: 0;
+    padding: 0;
+    font-size: 1.75em;
+}
+#banner h2{
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-style: italic;
+}
+#banner a{
+    font-size: 1.2em;
+    font-weight: bold;    
+}
+#banner nav{
+    width: 100%;
+}
+#banner nav ul {
+    display: flex;
+    padding-inline-start: 0;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-block-end: 3em;
+}
+img {
+    max-inline-size: 100%;
+    height: auto;
+}
+.contentMargin>div>div{
+    border-inline-start: 10px solid #FCE570;
+    padding-inline-start: 20px;
+}
+.border{
+    border: 10px solid #78aee3;
+    box-shadow: 10px 10px 0px 0px rgb(176, 227, 245, 0.8);
+    padding: 20px;
+    background-color: #caebba;
+}
+footer{
+    text-align: center;
+}
+footer div nav ul{
+    list-style: none;
+    padding-left: 0;
+}
+.contentMargin {
+    container-type: inline-size;
+    container-name: contentMargin;
+}
+@container contentMargin (min-width: 768px) {
+    .contentMargin img {
+        inline-size: 45%;
+    }
+
+    .contentMargin>div {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contentMargin h2 {
+        margin-block-start: 0;
+    }
+}
+@media (min-width: 768px){
+    #banner{
+        flex-direction: row;
+    }
+    #banner nav{
+        flex: 1;
+    }
+    #floatImage{
+    float: right;
+    margin-left: 5px;
+}
+}
